@@ -5,14 +5,14 @@ const typeDefs = gql`
   a movie type has title, duration, year, and movie poster path fields
   """
   type Query {
-    movies: [Movie!]!
+    moviesForHome: Movie!
   }
 
   type Movie {
     id: ID!
     title: String!
     duration: String
-    year: Integer!
+    year: Int!
     img: String
   }
 `;
