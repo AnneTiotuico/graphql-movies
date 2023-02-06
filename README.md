@@ -5,14 +5,10 @@
     - title, duration, year, and movie poster
 
 ### todos
-- set up express server
-- set up apollo server
-  - figure out what the response body is when we fetch data from the movie source
-    - get a token
-  - parse through the data -- what fields do we want?
-  - define schema for the movie card
-  - how do we use the response body results??
-    - do liftoff2 (spend 1-2 hrs?)
+- set up card component
+
+### next
+- create the frontend container that displays many cards
 
 ### TMDB response body example
 ```json

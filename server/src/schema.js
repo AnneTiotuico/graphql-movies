@@ -13,7 +13,8 @@ const typeDefs = gql`
     title: String!
     duration: String
     year: Int!
-    img: String
+    overview: String
+    posterPath: String
   }
 `;
 
