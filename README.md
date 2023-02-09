@@ -5,10 +5,10 @@
     - title, duration, year, and movie poster
 
 ### todos
-- set up card component
+- created cards container and worked on css for each card
 
 ### next
-- create the frontend container that displays many cards
+- make each card clickable so when clicked a modal view opens
 
 ### TMDB response body example
 ```json
@@ -63,3 +63,43 @@ vote_average: 7.6,
 vote_count: 978
 }
 ```
+
+
+
+/*
+{
+  "errors": [
+    {
+      "message": "Expected Iterable, but did not find one for field \"Query.moviesForHome\".",
+      "locations": [
+        {
+          "line": 2,
+          "column": 3
+        }
+      ],
+      "path": [
+        "moviesForHome"
+      ],
+      "extensions": {
+        "code": "INTERNAL_SERVER_ERROR",
+        "exception": {
+          "message": "Expected Iterable, but did not find one for field \"Query.moviesForHome\".",
+          "stacktrace": [
+            "GraphQLError: Expected Iterable, but did not find one for field \"Query.moviesForHome\".",
+            "    at completeListValue (/Users/annetiotuico/Desktop/graphql-movies/server/node_modules/graphql/execution/execute.js:668:11)",
+            "    at completeValue (/Users/annetiotuico/Desktop/graphql-movies/server/node_modules/graphql/execution/execute.js:607:12)",
+            "    at completeValue (/Users/annetiotuico/Desktop/graphql-movies/server/node_modules/graphql/execution/execute.js:584:23)",
+            "    at /Users/annetiotuico/Desktop/graphql-movies/server/node_modules/graphql/execution/execute.js:486:9",
+            "    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+            "    at async Promise.all (index 0)",
+            "    at async execute (/Users/annetiotuico/Desktop/graphql-movies/server/node_modules/apollo-server-core/dist/requestPipeline.js:205:20)",
+            "    at async processGraphQLRequest (/Users/annetiotuico/Desktop/graphql-movies/server/node_modules/apollo-server-core/dist/requestPipeline.js:148:28)",
+            "    at async processHTTPRequest (/Users/annetiotuico/Desktop/graphql-movies/server/node_modules/apollo-server-core/dist/runHttpQuery.js:221:30)"
+          ]
+        }
+      }
+    }
+  ],
+  "data": null
+}
+*/

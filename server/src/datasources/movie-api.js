@@ -1,4 +1,5 @@
 const { RESTDataSource } = require('apollo-datasource-rest');
+const { toCamel } = require('snake-camel');
 
 class MovieAPI extends RESTDataSource {
   constructor() {
@@ -7,7 +8,9 @@ class MovieAPI extends RESTDataSource {
   }
 
   async getMoviesForHome(apiKey) {
-    return this.get(`latest?api_key=${apiKey}&language=en-US`);
+    let data = await this.get(`popular?api_key=${apiKey}&language=en-US`);
+ 
+    return data.results.map(toCamel);
   }
 }
 

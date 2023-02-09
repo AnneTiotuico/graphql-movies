@@ -1,11 +1,12 @@
 import { useQuery, gql } from '@apollo/client';
-import Card from './components/card'
+import CardsContainer from './components/cardsContainer';
 
 const LATEST_MOVIE = gql`
   query getMovies {
     moviesForHome {
       title
       overview
+      releaseDate
       posterPath
     }
   }
@@ -24,13 +25,14 @@ function App() {
 
   return (
     <div className="App">
-      <Card 
-        title={data.moviesForHome.title} 
-        overview={data.moviesForHome.overview} 
-        posterPath={data.moviesForHome.posterPath}
+      <CardsContainer 
+        movies={data.moviesForHome}
       />
     </div>
   );
 }
 
 export default App;
+
+
+// since we are already using useQuery, we just pass in data.moviesForHome
