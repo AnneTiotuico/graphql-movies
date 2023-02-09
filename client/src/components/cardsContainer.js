@@ -1,16 +1,19 @@
 import Card from './card'
 
-export default function CardsContainer({ movies }) {
+export default function CardsContainer({ movies, onViewModal, onSelected }) {
   return (
     movies.map(movie => {
-      let { title, overview, releaseDate, posterPath } = movie
+      let { id, title, overview, releaseDate, posterPath } = movie
       return (
         <Card 
-          key={title}
+          key={id}
+          id={id}
           title={title} 
           overview={overview} 
           releaseDate={releaseDate}
           posterPath={posterPath}
+          onViewModal={onViewModal}
+          onSelected={onSelected}
         />
       )
     })

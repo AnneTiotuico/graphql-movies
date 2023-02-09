@@ -1,7 +1,17 @@
-function Card({ title, overview, releaseDate, posterPath }) {
+// import { useState } from 'react'
 
+function Card({ id, title, overview, releaseDate, posterPath, onViewModal, onSelected }) {
+  // when card clicked, modal opens for that card
+  // const [ clicked, setClicked ] = useState(false)
+
+  const handleClick = () => {
+    onSelected({id, title, overview, releaseDate, posterPath})
+    onViewModal();
+  }
+
+  // modal style
   return (
-    <div className="card">
+    <div className="card" onClick={handleClick}>
       <h1>{title}</h1>
       <p>{overview}</p>
       <p>{releaseDate}</p>

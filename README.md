@@ -10,6 +10,16 @@
 ### next
 - make each card clickable so when clicked a modal view opens
 
+### modal
+- create a Modal component
+  - have the outer div be the dim background (when clicked, toggle viewModal to close)
+  - have the inner div be the style of the modal (stop propogation when clicked)
+- create a state for viewModal (set false)
+- ternary in the main component (ex. viewModal ? <Modal /> : null)
+- create a handler for modal visibility (onClick, run handler)
+  - and pass down handler to children that would toggle that state
+- if we need the info of the component we clicked for the modal, then pass the handler to the component clicked, retrieve its data and set to a state (passed down from the main component)
+
 ### TMDB response body example
 ```json
 {
